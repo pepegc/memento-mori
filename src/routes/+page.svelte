@@ -66,7 +66,7 @@
             </form>
         </div>
 
-        <div class='flex flex-col p-2 mx-auto'>
+        <div class='flex flex-col p-2 mx-auto md:w-4/5'>
             <div class=''>
                 <p class='text-xs text-center mb-2'>52 weeks per year</p>
             </div>
