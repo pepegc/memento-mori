@@ -39,10 +39,29 @@
         <form method='get' action='#'>
             <span>
                 <label class="block text-gray-700 text-sm font-bold mb-2 mt-3" for="birthdate">Birthdate</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="birthdate" name='birthdate' type="date" value={birthdate.toISOString().substr(0, 10)}>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="birthdate"
+                    name='birthdate'
+                    type="date"
+                    min="1900-01-01"
+                    max='{(new Date()).toISOString().substr(0, 10)}'
+                    value='{birthdate.toISOString().substr(0, 10)}'
+                >
             </span>
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="lifespan">Lifespan</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lifespan" name='lifespan' type="number" placeholder="lifespan" value={lifespan}>
+            <span>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="lifespan">Lifespan</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 mb-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="lifespan"
+                    name='lifespan'
+                    type="number"
+                    min="10"
+                    max="130"
+                    placeholder="lifespan"
+                    value={lifespan}
+                    >
+            </span>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline cursor-pointer" id="submit" type="submit" value="Memento mori">
         </form>
     </div>
