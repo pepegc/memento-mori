@@ -2,5 +2,6 @@
 
 *Remember that you have to die*
 
+Try it here: [https://memento-mori.pepegc.com/](https://memento-mori.pepegc.com/?birthdate=1990-05-23&lifespan=80)
 
 Data from [worlddata.info](https://www.worlddata.info/life-expectancy.php#by-population)
