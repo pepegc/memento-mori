@@ -18,7 +18,7 @@
         <a href='https://pepegc.com/'>
             <p class='text-xs'>← Home</p>
         </a>
-        <a href='https://github.com/pepegc/memento-mori' class='hover:underline' target='_blank'>
+        <a href='https://github.com/pepegc/memento-mori' class='hover:underline' target='_blank' rel='noreferrer'>
             <div class='flex items-center gap-1'>
                 <svg class='fill-gray-700 w-4 h-4'>
                     <path d='M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8'>
@@ -36,7 +36,7 @@
                 src='/memento-mori-still-life-with-musical-instruments-carstian-luyckx.jpg'
                 alt='art by carstian luyckx'
                 />
-            <form method='get' action='#'>
+            <form method='post' action=''>
                 <span>
                     <label class="block text-gray-700 text-sm font-bold mb-2 mt-3" for="birthdate">Birthdate</label>
                     <input
@@ -62,7 +62,10 @@
                         value={lifespan}
                         >
                 </span>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline cursor-pointer" id="submit" type="submit" value="Memento mori">
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline cursor-pointer"
+                    id="submit" type="submit" value="Memento mori"
+                >
             </form>
         </div>
 
@@ -72,7 +75,7 @@
             </div>
             {#each Array(Math.ceil(lifespan/5)) as _, i}
                 <div class='flex gap-2 items-end mb-2 mr-2'>
-                    <div class=''>
+                    <div class='w-11/12'>
                         {#each Array(Math.min(5, lifespan-5*i )) as _, q}
                             <div class='flex gap-0.5 mb-0.5'>
                                 {#each Array(52) as _, j}
